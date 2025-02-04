@@ -27,7 +27,7 @@ class StudentServiceIntegrationTest {
         // TODO: Implémenter le test d'intégration, insérer un Student en base de données et le récupérrer
         Student student = new Student();
         student.setName("Oli VILLA");
-        student.setAddress("3 rue du moulin blanc");
+        student.setAddress("rue du moulin blanc");
 
         Student savedStudent = studentService.saveStudent(student);
 
@@ -38,6 +38,6 @@ class StudentServiceIntegrationTest {
 
         assertThat(retrievedStudent).isPresent();
         assertThat(retrievedStudent.get().getName()).isEqualTo("Oli VILLA");
-        assertThat(retrievedStudent.get().getAddress()).isEqualTo("3 rue du moulin blanc");
+        assertThat(retrievedStudent.get().getAddress()).isEqualTo("rue du moulin blanc");
     }
 }
